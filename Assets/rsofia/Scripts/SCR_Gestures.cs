@@ -7,30 +7,90 @@ public class SCR_Gestures : MonoBehaviour {
 
     public Animator animator;
     public GameObject popUpGreat;
-    public Text txtPopUp; 
+    public Text txtPopUp;
 
-    public void OnExtendedFingerActivated()
+    #region GESTURES
+
+        #region HAND GUN 
+        public void OnExtendedFingerActivated()
+        {
+            Debug.Log("Hand gun, Extended finger Activated!");
+            animator.SetTrigger("Wave");
+            OpenPopUp("Wave");
+        }
+
+        public void OnExtendedFingerDeactivated()
+        {
+            Debug.Log("Extended finger Deactivated!");
+        }
+    #endregion
+
+        #region THUMBS UP
+        public void OnGoodGestureActivated()
+        {
+            Debug.Log("Thumbs Up Activated!");
+            animator.SetTrigger("jump");
+            OpenPopUp("JUMP");
+        }
+
+        public void OnGoodGestureDeactivated()
+        {
+            Debug.Log("Good Dectivated!");
+        }
+        #endregion
+
+        #region PEACE SIGN
+        public void OnPeaceSignActivated()
+        {
+            Debug.Log("Peace sign");
+            OpenPopUp("Peace Sign");
+        }
+
+        public void OnPeaceSignDeactivated()
+        {
+            Debug.Log("Deactivated peace sign");
+        }
+
+    #endregion
+
+        #region PUNCH
+        public void OnPunchActivated()
+        {
+            Debug.Log("Punched!");
+            OpenPopUp("PUNCH");
+        }
+        public void OnPunchDeactivated()
+        {
+            Debug.Log("Punch ended");
+        }
+    #endregion
+
+        #region SEPARATE PALMS
+        public void OnSeparatePalmsActivate()
+        {
+        Debug.Log("Zoom in w separate palms");
+        }
+
+        public void OnSeparatePalmsDeactivate()
+        {
+            Debug.Log("Zoom out");
+        }
+    #endregion
+
+    #region ZOOM IN
+    public void OnZoomIn()
     {
-        Debug.Log("Extended finger Activated!");
-        animator.SetTrigger("wave");
-        OpenPopUp("Wave");
+        Debug.Log("Zoom in");
+        if(Camera.main.fieldOfView <= 15)
+            Camera.main.fieldOfView -= 3;
     }
+    #endregion
 
-    public void OnExtendedFingerDeactivated()
-    {
-        Debug.Log("Extended finger Deactivated!");
-    }
+    #endregion
 
-    public void OnGoodGestureActivated()
+    public void HandNearSomething()
     {
-        Debug.Log("Good Activated!");
-        animator.SetTrigger("jump");
-        OpenPopUp("JUMP");
-    }
-
-    public void OnGoodGestureDeactivated()
-    {
-        Debug.Log("Good Dectivated!");
+        Debug.Log("Hand Near Something");
     }
 
 
