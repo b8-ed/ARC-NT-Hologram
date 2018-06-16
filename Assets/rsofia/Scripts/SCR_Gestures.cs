@@ -81,8 +81,14 @@ public class SCR_Gestures : MonoBehaviour {
     public void OnZoomIn()
     {
         Debug.Log("Zoom in");
-        if(Camera.main.fieldOfView <= 15)
+        if(Camera.main.fieldOfView >= 15)
             Camera.main.fieldOfView -= 3;
+    }
+    public void OnZoomOut()
+    {
+        Debug.Log("Zoom Out");
+        if (Camera.main.fieldOfView <= 150)
+            Camera.main.fieldOfView += 3;
     }
     #endregion
 
