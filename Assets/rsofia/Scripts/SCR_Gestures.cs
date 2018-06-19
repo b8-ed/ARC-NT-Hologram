@@ -15,7 +15,7 @@ public class SCR_Gestures : MonoBehaviour {
         public void OnExtendedFingerActivated()
         {
             Debug.Log("Hand gun, Extended finger Activated!");
-            animator.SetTrigger("Wave");
+            animator.SetTrigger("wave");
             OpenPopUp("Wave");
         }
 
@@ -39,25 +39,13 @@ public class SCR_Gestures : MonoBehaviour {
         }
         #endregion
 
-        #region PEACE SIGN
-        public void OnPeaceSignActivated()
-        {
-            Debug.Log("Peace sign");
-            OpenPopUp("Peace Sign");
-        }
-
-        public void OnPeaceSignDeactivated()
-        {
-            Debug.Log("Deactivated peace sign");
-        }
-
-    #endregion
-
+    
         #region PUNCH
         public void OnPunchActivated()
         {
             Debug.Log("Punched!");
-            OpenPopUp("PUNCH");
+        animator.SetTrigger("brazos");
+        OpenPopUp("¡Mueve los brazos!");
         }
         public void OnPunchDeactivated()
         {
@@ -65,40 +53,29 @@ public class SCR_Gestures : MonoBehaviour {
         }
     #endregion
 
-        #region SEPARATE PALMS
-        public void OnSeparatePalmsActivate()
-        {
-        Debug.Log("Zoom in w separate palms");
-        }
-
-        public void OnSeparatePalmsDeactivate()
-        {
-            Debug.Log("Zoom out");
-        }
-    #endregion
-
-    #region ZOOM IN
+    #region ZOOM
     public void OnZoomIn()
     {
         Debug.Log("Zoom in");
-        if(Camera.main.fieldOfView >= 15)
+        if (Camera.main.fieldOfView >= 15)
+        {
             Camera.main.fieldOfView -= 3;
+            OpenPopUp("Zoom in");
+        }
     }
     public void OnZoomOut()
     {
         Debug.Log("Zoom Out");
         if (Camera.main.fieldOfView <= 150)
+        {
             Camera.main.fieldOfView += 3;
+            OpenPopUp("Zoom out");
+        }
     }
     #endregion
 
     #endregion
-
-    public void HandNearSomething()
-    {
-        Debug.Log("Hand Near Something");
-    }
-
+    
 
     #region UI
     public void OpenPopUp(string _text)
