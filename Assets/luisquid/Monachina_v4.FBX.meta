@@ -93,7 +93,47 @@ ModelImporter:
     13700006: Group51948
     13700008: Group6985
     13700010: Sphere001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabello
+    second: {fileID: 2100000, guid: fe12930dbe45cf94e9f85c9d316a4b3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cara
+    second: {fileID: 2100000, guid: 2e1aa22a9f7e19546a90a06fa22d428f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Manos_mano_vr_defaultMat
+    second: {fileID: 2100000, guid: 8fe7738d96b01ad42b88dfc3452ff189, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Manos_vr_defaultMat
+    second: {fileID: 2100000, guid: d8cd3d13c3b923d47b4860a32b9cf075, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ojos
+    second: {fileID: 2100000, guid: 4513e75a268cc3e49a42abf9011a8173, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ropa
+    second: {fileID: 2100000, guid: 9c20f8c7e1835044c8cfa918f63bce6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabeza+cejas_Retopo_vr_uv_default
+    second: {fileID: 2100000, guid: e0fd908799f26374598bffe7d30cd9d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: piernas_retopo_default
+    second: {fileID: 2100000, guid: 5cfe568cb095f4f41928bd70a5ba28f2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
