@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/luisquid/ChineseGestures.unity
+    guid: 364f152a2eb460541b93ca7b1be00670
